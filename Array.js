@@ -43,7 +43,11 @@ console.log(total)
 
 var scores = [20,30,40,50,60,70,81]
 
-//create new array with even numbers 
+//create new array with even numbers and multiply with 3 and sum them
+
+//for accumalating use reduce 
+
+//for filter use filter based on condition 
 var evens = []
 for(let i =0;i<scores.length;i++){
 
@@ -57,3 +61,10 @@ for(let i =0;i<scores.length;i++){
 
 let newFilterEven = scores.filter(score=>score%2==0)
 console.log(newFilterEven)
+
+
+//map
+var maped = newFilterEven.map(score=>score*3)
+console.log(maped)
+var sum = maped.reduce((sum,val)=>sum+val,0)
+console.log(sum)
